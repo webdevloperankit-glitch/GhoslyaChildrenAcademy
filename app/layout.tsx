@@ -1,16 +1,22 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
+import { Outfit } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { Toaster } from "@/components/ui/sonner"
 import "./globals.css"
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+})
+
 export const metadata: Metadata = {
-  title: "Ghoslya Childrens Academy Bharni - Quality Education for Young Minds",
+  title: "GrowUp Academy | Premium Learning Platform",
   description:
-    "Premier educational institution in Bharni providing quality education, character building, and holistic development for children.",
-  generator: "v0.app",
+    "Master new skills with our premium courses in editing, coding, and tech. Join thousands of elite learners today.",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -20,8 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans ${outfit.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
+        <Toaster position="bottom-right" />
         <Analytics />
       </body>
     </html>
