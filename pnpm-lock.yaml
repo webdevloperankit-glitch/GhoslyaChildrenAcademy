@@ -111,7 +111,7 @@ importers:
         specifier: 1.0.4
         version: 1.0.4(@types/react-dom@18.0.0)(@types/react@18.0.0)(react-dom@18.0.0(react@18.0.0))(react@18.0.0)
       crypto:
-        specifier: latest
+        specifier: 1.0.1
         version: 1.0.1
       date-fns:
         specifier: 4.1.0
@@ -138,7 +138,7 @@ importers:
         specifier: latest
         version: 0.4.6(react-dom@18.0.0(react@18.0.0))(react@18.0.0)
       razorpay:
-        specifier: latest
+        specifier: 2.9.6
         version: 2.9.6
       react:
         specifier: ^18
